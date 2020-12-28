@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lisn.mystudy">
+    <!-- 权限是普通的“蓝牙操作权限”，可以操作对蓝牙的打开，搜索配对设备等操作 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" /> <!-- 称为“蓝牙管理”，是对蓝牙的可见性设置，扫描装置，关闭等操作所设置的 -->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" /> <!-- 6.0版本以后，以上两者不够，还需要位置权限： -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <application
+        android:name=".APP"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Coroutine.CoroutineActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".BtClientActivity" />
+        <activity android:name=".HomeActivity">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
+        <activity android:name=".MainActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+    </application>
+
+</manifest>

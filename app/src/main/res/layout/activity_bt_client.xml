@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".BtClientActivity">
+
+    <Button
+        android:onClick="reScan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="重新扫描" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_bt"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/stroke"
+        android:padding="2dp" />
+
+    <TextView
+        android:id="@+id/tv_tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/input_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入短消息" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="sendMsg"
+        android:text="sendMsg" />
+
+    <EditText
+        android:id="@+id/input_file"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="/sdcard/159.jpg"
+        android:hint="请输入文件路径(例如:/sdcard/1.txt)" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="sendFile"
+        android:text="sendFile" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_log"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LOG:"
+            android:textColor="@color/colorPrimary" />
+    </ScrollView>
+
+</LinearLayout>
